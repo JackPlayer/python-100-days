@@ -5,4 +5,5 @@
 Small projects on [replit.com](https://replit.com/repls/folder/100-days)
 ### Day 14: Coffee Machine
 Implementation of a coffee machine that takes coins and manages resources
-
+### Day 14: Coffee Machine (Object Oriented)
+Implementation of the coffee maker using OOP classes
