@@ -3,7 +3,11 @@
 
 ### Day 1 - 13 
 Small projects on [replit.com](https://replit.com/repls/folder/100-days)
-### Day 14: Coffee Machine
+### Day 15: Coffee Machine
 Implementation of a coffee machine that takes coins and manages resources
-### Day 14: Coffee Machine (Object Oriented)
+### Day 16: Coffee Machine (Object Oriented)
 Implementation of the coffee maker using OOP classes
+### Day 17: Quiz Game
+True false quiz game using OOP
+### Day 18: Turtle Graphics Painting
+Creating painting use the turtle graphics library and other libraries
