@@ -41,10 +41,11 @@ def race(racers, max_stride):
 
 if __name__ == '__main__':
     screen.setup(width=500, height=400)
-    bet = screen.textinput(title="Place your bet", prompt="Which turtle will win?")
 
     race_entrants = initialize_turtles()
     move_to_start(race_entrants)
+    bet = screen.textinput(title="Place your bet", prompt="Which turtle will win?")
+
     winner = race(racers=race_entrants, max_stride=30)
     if winner.color() == bet:
         print(f'You win! The {winner.color()[0]} turtle won!')
