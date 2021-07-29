@@ -1,12 +1,12 @@
 from turtle import Turtle
 
-MOVE_DISTANCE = 20
+MOVE_DISTANCE = 5
 
 
 class Snake:
     def __init__(self):
         self.parts = []
-        for part in range(0, 3):
+        for part in range(0, 10):
             body_part = Turtle(shape="square")
             body_part.penup()
             body_part.color("white")
