@@ -14,3 +14,6 @@ Creating painting use the turtle graphics library and other libraries
 ### Day 19: Turtle Racing
 Turtle race where the user bets on who will win
 ### Day 20, 21: Snake Game
+Classic game of snake using turtle library and object oriented design
+### Day 22: Pong
+Game of pong using turtle library.
