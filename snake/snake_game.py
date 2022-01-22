@@ -11,14 +11,14 @@ score = 0
 
 
 def did_hit_wall(snake_head):
-    margin_px = 5;
+    margin_px = 5
     snake_head_pos_x = snake_head.xcor()
     snake_head_pos_y = snake_head.ycor()
 
-    hit_right_wall = (snake_head_pos_x > SCREEN_WIDTH / 2 - margin_px)
-    hit_left_wall = (snake_head_pos_x < -SCREEN_WIDTH / 2 + margin_px)
-    hit_top_wall = (snake_head_pos_y > SCREEN_HEIGHT / 2 - margin_px)
-    hit_bottom_wall = (snake_head_pos_y < -SCREEN_HEIGHT / 2 + margin_px)
+    hit_right_wall = snake_head_pos_x > SCREEN_WIDTH / 2 - margin_px
+    hit_left_wall = snake_head_pos_x < -SCREEN_WIDTH / 2 + margin_px
+    hit_top_wall = snake_head_pos_y > SCREEN_HEIGHT / 2 - margin_px
+    hit_bottom_wall = snake_head_pos_y < -SCREEN_HEIGHT / 2 + margin_px
     return hit_bottom_wall or hit_left_wall or hit_right_wall or hit_top_wall
 
 
@@ -35,7 +35,7 @@ def did_hit_self(_snake):
     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     screen = Screen()
     screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
     screen.tracer(0)
@@ -47,10 +47,10 @@ if __name__ == '__main__':
     title = Title("Snake")
     screen.listen()
 
-    screen.onkey(snake.up, 'Up')
-    screen.onkey(snake.down, 'Down')
-    screen.onkey(snake.left, 'Left')
-    screen.onkey(snake.right, 'Right')
+    screen.onkey(snake.up, "Up")
+    screen.onkey(snake.down, "Down")
+    screen.onkey(snake.left, "Left")
+    screen.onkey(snake.right, "Right")
 
     game_is_on = True
     while game_is_on:

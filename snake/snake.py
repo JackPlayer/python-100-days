@@ -19,7 +19,7 @@ class Snake:
         reversed_snake = list(reversed(self.parts))
         for index in range(len(reversed_snake)):
 
-            is_front_part = (index == len(reversed_snake) - 1)
+            is_front_part = index == len(reversed_snake) - 1
 
             if is_front_part:
                 reversed_snake[index].forward(MOVE_DISTANCE)

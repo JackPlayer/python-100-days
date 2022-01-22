@@ -17,12 +17,12 @@ def coffee_machine():
             if coffee_maker.is_resource_sufficient(menu_item):
                 if money_machine.make_payment(menu_item.cost):
                     coffee_maker.make_coffee(menu_item)
-        elif order == 'off':
+        elif order == "off":
             is_on = False
-        elif order == 'report':
+        elif order == "report":
             coffee_maker.report()
             money_machine.report()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     coffee_machine()

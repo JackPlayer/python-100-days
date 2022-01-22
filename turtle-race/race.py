@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 import random
 
 screen = Screen()
-COLORS = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 
 def initialize_turtles():
@@ -39,7 +39,7 @@ def race(racers, max_stride):
                 return racer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     screen.setup(width=500, height=400)
 
     race_entrants = initialize_turtles()
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     winner = race(racers=race_entrants, max_stride=30)
     if winner.color() == bet:
-        print(f'You win! The {winner.color()[0]} turtle won!')
-    print(f'You lost. The {winner.color()[0]} turtle won!')
+        print(f"You win! The {winner.color()[0]} turtle won!")
+    print(f"You lost. The {winner.color()[0]} turtle won!")
 
     screen.exitonclick()

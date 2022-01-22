@@ -6,7 +6,9 @@ class QuizBrain:
 
     def next_question(self):
         question_text = self.questions[self.question_number].text
-        user_answer = input(f'Q.{self.question_number + 1}: {question_text} (True / False)? ')
+        user_answer = input(
+            f"Q.{self.question_number + 1}: {question_text} (True / False)? "
+        )
         self.check_answer(user_answer)
         self.question_number += 1
         print("\n")

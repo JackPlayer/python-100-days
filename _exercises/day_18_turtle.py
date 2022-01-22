@@ -61,8 +61,8 @@ def draw_spirograph(_turtle, circle_radius, num_circles):
 turtle = Turtle()
 screen = Screen()
 
-turtle.shape('turtle')
-turtle.color('SpringGreen3')
+turtle.shape("turtle")
+turtle.color("SpringGreen3")
 turtle.pensize(2)
 turtle.shapesize(3, 3, 3)
 turtle.speed(0)

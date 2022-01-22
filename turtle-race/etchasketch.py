@@ -29,13 +29,13 @@ def go_backward():
 def main():
     screen.listen()
 
-    screen.onkey(key='w', fun=go_forward)
-    screen.onkey(key='s', fun=go_backward)
-    screen.onkey(key='d', fun=turn_right)
-    screen.onkey(key='a', fun=turn_left)
-    screen.onkey(key='c', fun=reset_position)
+    screen.onkey(key="w", fun=go_forward)
+    screen.onkey(key="s", fun=go_backward)
+    screen.onkey(key="d", fun=turn_right)
+    screen.onkey(key="a", fun=turn_left)
+    screen.onkey(key="c", fun=reset_position)
     screen.exitonclick()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
