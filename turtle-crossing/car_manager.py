@@ -66,4 +66,3 @@ class CarManager:
             print(f"Car {hash(car)}: {car.xcor()}, {car.ycor()} ")
             if car.distance(x_cor, y_cor) < threshold:
                 return True
-

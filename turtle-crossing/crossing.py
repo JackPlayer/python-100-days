@@ -55,7 +55,9 @@ class Crossing:
 
                 self.player.reset()
 
-            if self.car_manager.did_car_hit(self.player.xcor(), self.player.ycor(), HIT_THRESHOLD):
+            if self.car_manager.did_car_hit(
+                self.player.xcor(), self.player.ycor(), HIT_THRESHOLD
+            ):
                 self.prompt.show_prompt("GAME OVER")
 
                 time.sleep(5)
