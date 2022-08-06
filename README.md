@@ -17,5 +17,7 @@ Turtle race where the user bets on who will win
 Classic game of snake using turtle library and object oriented design
 ### Day 22: Pong
 Game of pong using turtle library.
-
 ### Day 23: Turtle Crossing 
+Game of turtle crossing using the turtle library 
+### Day 24: Mail Merge
+Automated forum letter generator
