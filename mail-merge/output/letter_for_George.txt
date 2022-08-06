@@ -1,0 +1,6 @@
+Hello George,
+
+Welcome to python coding... hope you enjoy
+
+Sincerely,
+Jack
