@@ -22,4 +22,6 @@ Game of turtle crossing using the turtle library
 ### Day 24: Mail Merge
 Automated forum letter generator
 ### Day 25: State Guessing Game
-Turtle game to guess all 50 states 
+Turtle game to guess all 50 states
+### Day 26: NATO Phonetic Alphabet
+Word to phonetic alphabet converter with list comprehensions
