@@ -17,13 +17,15 @@ class Manager:
         self.canvas = Canvas(width=200, height=189, bg="white", highlightthickness=0)
         self.logo = PhotoImage(file='./logo.png')
         self.canvas.create_image(100, 100, image=self.logo)
-        self.website_label = Label(self.window, text="Website:", background="white")
+        self.website_label = Label(self.window, text="Website", background="white")
         self.website_entry = Entry(self.window, textvariable=self.website_entry_var)
+        self.search_button = Button(text="Search", command=self.search_callback,
+                                               background="white")
 
-        self.email_label = Label(self.window, text="Email/Username:", background="white")
+        self.email_label = Label(self.window, text="Email/Username", background="white")
         self.email_entry = Entry(self.window, textvariable=self.email_entry_var)
 
-        self.password_label = Label(self.window, text="Password:", background="white")
+        self.password_label = Label(self.window, text="Password", background="white")
         self.password_entry = Entry(self.window, textvariable=self.password_entry_var)
 
         self.generate_password_button = Button(text="Generate Password", command=self.generate_password_callback,
@@ -32,14 +34,15 @@ class Manager:
         self.add_password_button = Button(text="Add", command=self.add_password_callback, background="white")
 
         self.canvas.grid(row=0, column=2)
-        self.website_label.grid(row=1, column=1, padx=10, pady=10)
-        self.website_entry.grid(row=1, column=2, padx=10, pady=10, columnspan=2, sticky=W + E)
+        self.website_label.grid(row=1, column=1, pady=10)
+        self.website_entry.grid(row=1, column=2, pady=10)
+        self.search_button.grid(row=1, column=3, pady=10,  sticky=W + E)
 
-        self.email_label.grid(row=2, column=1, padx=10, pady=10)
+        self.email_label.grid(row=2, column=1, pady=10)
         self.email_entry.grid(row=2, column=2, padx=10, pady=10, columnspan=2, sticky=W + E)
-        self.password_label.grid(row=3, column=1, padx=10, pady=10)
-        self.password_entry.grid(row=3, column=2, padx=10, pady=10)
-        self.generate_password_button.grid(row=3, column=3, padx=10, pady=10)
+        self.password_label.grid(row=3, column=1, pady=10)
+        self.password_entry.grid(row=3, column=2, pady=10)
+        self.generate_password_button.grid(row=3, column=3, pady=10)
         self.add_password_button.grid(row=4, column=2, columnspan=2, sticky=W + E)
         self.window.mainloop()
 
@@ -63,6 +66,17 @@ class Manager:
         else:
             messagebox.showwarning(title="Warning", message="Please make sure all the fields are filled")
 
+    def search_callback(self):
+        search_result = PasswordEntry.get_result(search=self.website_entry_var.get())
+
+        if search_result:
+            try:
+                message = f"{self.website_entry_var.get()}:\nEmail: {search_result['email']}\nPassword: {search_result['password']}"
+            except KeyError:
+                message = f"Could not retrieve the email or password for {self.website_entry_var.get()}"
+        else:
+            message = f"No results were found for {self.website_entry_var.get()}"
+        messagebox.showinfo("Results", message)
 
 if __name__ == "__main__":
     manager = Manager()

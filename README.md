@@ -31,3 +31,5 @@ Simple miles to kilometers converter with tkinter
 Pomodoro countdown timer using tkinter
 ### Day 29: Password Manager
 Password manager using tkinter
+### Day 30: Password Manage - Improvements
+Change to the json data format & implements a search functionality 
